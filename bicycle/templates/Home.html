@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    Hello World!
+    <h2>pay Rs. 69</h2>
+    <form action="{% url 'charge' %}" method="post">
+        {% csrf_token %}
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="{{ key }}"
+                data-description="A Django Charge"
+                data-amount="6900"
+                data-locale="auto"></script>
+      </form>
+    
+
 </body>
 </html>
