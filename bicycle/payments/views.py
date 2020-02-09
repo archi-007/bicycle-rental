@@ -1,10 +1,10 @@
-import stripe # new
+import stripe 
 
 from django.conf import settings
 from django.views.generic.base import TemplateView
-from django.shortcuts import render # new
+from django.shortcuts import render 
 
-stripe.api_key = settings.STRIPE_SECRET_KEY # new
+stripe.api_key = settings.STRIPE_SECRET_KEY 
 
 
 class HomePageView(TemplateView):
@@ -16,7 +16,7 @@ class HomePageView(TemplateView):
         return context
 
 
-def charge(request): # new
+def charge(request): 
     if request.method == 'POST':
         charge = stripe.Charge.create(
             amount=500,
