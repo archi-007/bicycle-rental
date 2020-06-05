@@ -18,9 +18,10 @@ from django.urls import path,include
 from django.contrib.auth import views as auth_view
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
     path('',include('payments.urls')),
     path('user/',include('User.urls')),
-    path('auth/', include('rest_framework_social_oauth2.urls')),
+    path('auth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 
 ]

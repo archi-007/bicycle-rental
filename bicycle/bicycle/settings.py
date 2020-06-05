@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'payments.apps.PaymentsConfig',
-    'rental.apps.RentalConfig'
+    'rental.apps.RentalConfig',
+    'User.apps.UserConfig',
+    'oauth2_provider',
 ]
 
 MIDDLEWARE = [

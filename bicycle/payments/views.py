@@ -6,6 +6,9 @@ from django.shortcuts import render
 
 stripe.api_key = settings.STRIPE_SECRET_KEY 
 
+def index(request):
+    return render(request,'index.html')
+
 
 class HomePageView(TemplateView):
     template_name = 'Home.html'
